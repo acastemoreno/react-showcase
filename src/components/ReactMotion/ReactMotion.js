@@ -1,14 +1,26 @@
-import React, { useState } from "react";
-import { Motion, spring } from "react-motion";
+import React, { Fragment } from "react";
+import SimpleTransition from "./SimpleTransition";
+import Stepped from "./Stepped";
+
+const renderExample = ({ title, component }, index) => {
+  return (
+    <Fragment key={index}>
+      <p>{title}</p>
+      {component()}
+    </Fragment>
+  );
+};
 
 const ReactMotion = () => {
-  // const [open, setOpen] = useState(false);
+  const examples = [
+    {
+      title: "Simple Transition",
+      component: () => <SimpleTransition width={400} />,
+    },
+    { title: "Stepped Show", component: () => <Stepped /> },
+  ];
 
-  return (
-    <Motion defaultStyle={{ x: 0 }} style={{ x: spring(10) }}>
-      {(value) => <div>{value.x}</div>}
-    </Motion>
-  );
+  return <Fragment>{examples.map(renderExample)}</Fragment>;
 };
 
 export default ReactMotion;
