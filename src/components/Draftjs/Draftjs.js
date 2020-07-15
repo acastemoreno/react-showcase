@@ -3,8 +3,8 @@ import {
   Editor,
   EditorState,
   RichUtils,
-  Modifier,
-  ContentState,
+  // Modifier,
+  // ContentState,
 } from "draft-js";
 import "draft-js/dist/Draft.css";
 import "./styles.css";

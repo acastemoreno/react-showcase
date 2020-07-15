@@ -32,9 +32,6 @@ const navigation = [
   },
 ];
 
-const Library1 = () => <h1>Library 1</h1>;
-const Library2 = () => <h1>Library 2</h1>;
-
 function App() {
   const [header, setHeader] = useState("");
 
@@ -68,7 +65,7 @@ function App() {
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </Main>
-        <Footer>Nombre Apellido | www.tupagina.com</Footer>
+        <Footer>Albert Castellano | www.tupagina.com</Footer>
       </Layout>
     </>
   );
