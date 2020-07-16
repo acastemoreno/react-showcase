@@ -7,6 +7,7 @@ import { Route, Switch, Link } from "react-router-dom";
 import Chartkick from "./components/Chartkick/Chartkick";
 import Draftjs from "./components/Draftjs/Draftjs";
 import ReactMotion from "./components/ReactMotion/ReactMotion";
+import Modal from "./components/ReactModal/Modal";
 
 const navigation = [
   {
@@ -26,12 +27,13 @@ const navigation = [
       // { title: "Paypal", dest: "/paypal" },
       // { title: "Stripe", dest: "/stripe" },
       { title: "React-Motion", dest: "/react-motion" },
+      { title: "React-Modal", dest: "/react-modal" },
     ],
   },
-  {
-    menuTitle: "Others",
-    menuItems: [{ title: "Other", dest: "/other" }],
-  },
+  // {
+  //   menuTitle: "Others",
+  //   menuItems: [{ title: "Other", dest: "/other" }],
+  // },
 ];
 
 function App() {
@@ -65,6 +67,7 @@ function App() {
             <Route path="/chartkick" component={Chartkick} />
             <Route path="/draftjs" component={Draftjs} />
             <Route path="/react-motion" component={ReactMotion} />
+            <Route path="/react-modal" component={Modal} />
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </Main>
